@@ -1,33 +1,27 @@
 """
 Description
-===========
 
-foo is for foo
+        The foo method is for making foo
 
 Usage
-=====
 
-foo(12) = "foo"
+        foo(12) = "foo"
 
-Arguments
-=========
+Method Signature(s)
 
-foo(x::Int; y::UTF8String="foo")
+      foo(x::Int; y::UTF8String="foo")
 
 Details
-=======
 
-The foo function makes foo
+      The foo function makes foo
 
 References
-=========
 
-(Tuxedo documentation)[http://www.duckduckgo.com]
+      http://www.duckduckgo.com
 
 See Also
-========
  
-bar(x) which makes bars
+      bar(x) which makes bars
 
 """
 
