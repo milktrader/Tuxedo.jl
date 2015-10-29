@@ -1,4 +1,4 @@
-# Tuxedo
+# Tuxedo.jl
 
 ![Top Hat](img/tophat.png)
 
@@ -14,3 +14,4 @@ provides a macro in the Julia environment that scaffolds documentation, function
 ````julia
 julia> @tux MyPackage mymethod
 ````
+[![Build Status](https://travis-ci.org/milktrader/Tuxedo.jl.png)](https://travis-ci.org/milktrader/Tuxedo.jl)
