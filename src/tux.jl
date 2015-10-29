@@ -14,10 +14,10 @@ Method Signature(s)
 Details
 
       The tux macro is used for its side=effects, which is to create a documentation=stubbed file for the method to be written, and a pending
-      test file. It takes two arguments: the package method and the method method. The auto-generated method file is placed in the src/ directory
-      of the package that is listed, while the auto-generated test file is placed in the test/ directory of the package. The macro determines 
-      what version of Julia is being used and places the two files in the appropriate .julia/ directory. After creating these files from 
-      REPL, a vi session is opened with both method definition and test files in the buffer.
+      test file. It takes two arguments: the package and method names. The auto-generated method file is placed in the src/ directory of the 
+      package that is listed, while the auto-generated test file is placed in the test/ directory of the package. The macro determines what 
+      version of Julia is being used and places the two files in the appropriate .julia/ directory. After creating these files from REPL, an
+      editor (currently only vi is supported) is opened with both method files and test files in the buffer.
 
 References
 
@@ -38,5 +38,6 @@ macro tux(pkg, method)
     run(pipeline(`cp $src src/$method.jl`))
     run(pipeline(`cp $test test/$method.jl`))
     run(pipeline(`ls`, `cat src/$method.jl`, pipeline(`sed s/foo/$method/g`, stdout="src/$method.jl")))
+    # TODO: make vi an option
     run(`vi src/$method.jl test/$method.jl`)
 end
