@@ -2,8 +2,6 @@ using FactCheck
 FactCheck.setstyle(:compact)
 FactCheck.onlystats(true)
 
-println("")
-
 facts("Unit tests confirm correct algorithm implementation") do
 
     context("true things are true") do
@@ -18,5 +16,3 @@ facts("Unit tests confirm correct algorithm implementation") do
         @pending foo(12) --> "foo"
     end
 end
-
-println("")

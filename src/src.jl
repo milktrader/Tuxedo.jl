@@ -1,7 +1,7 @@
 """
 Description
 
-        The foo method is for making foo
+        The foo() method is for making foo
 
 Usage
 
